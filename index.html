@@ -91,11 +91,29 @@
             width: 100%;
             height: 400px; /* 높이를 설정하세요 */
         }
+
+    /*위치 폼의 중앙정렬*/
+      .locationForm {
+           text-align: center;
+           display: flex;
+           flex-direction: colum;
+           align-items: center; /* 수평 중앙 */
+           justify-content: center; /* 수평 중앙 */
+        }
     </style>
+
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g2u4orbiqf"></script>
 </head>
 <body>
-    
+  
+<!-- 지도 버튼 표시 섹션 -->
+    <h1>지도 위치 및 좌표</h1>
+    <div class="container">
+    <form id="locationForm">
+        <button type="button" id="getLocation">내 위치 확인</button>
+        <div id="map" style="width: 100%; height: 400px; margin-top: 10px;"></div>
+    </form>
+  
 <!-- 탐방객 안전사고 처리 본문 표시 섹션 -->
 <h1>탐방객 안전사고 처리 현황</h1>
 <div class="container">
@@ -256,14 +274,9 @@
                 <td><textarea name="특이사항" rows="4"></textarea></td>
             </tr>
         </table>
-        <button type="submit">임시저장 및 다운로드 </button>
+        <button type="submit">저장 및 인쇄 </button>
     </form>
-    
-<!-- 지도 버튼 표시 섹션 -->
-    <form id="locationForm">
-        <button type="button" id="getLocation">내 위치 확인</button>
-        <div id="map" style="width: 100%; height: 400px; margin-top: 10px;"></div>
-    </form>
+  
 
 <!-- 탐방객 안전사고 처리 현황 저장 데이터 표시 섹션 -->
     <div id="savedData" style="display: none;">
@@ -272,7 +285,23 @@
         <br>
         <a id="downloadExcel" style="display: none;">엑셀 파일 다운로드</a><br>
         <a id="downloadText" style="display: none;">텍스트 파일 다운로드</a><br> 
+        <button id="printButton">저장 데이터 인쇄</button>       
     </div>
+  
+<!-- 인쇄 기능 추가 -->
+<script>
+    document.getElementById('printButton').addEventListener('click', function () {
+        const printContent = document.getElementById('savedData').innerHTML;
+        const printWindow = window.open('', '', 'height=600,width=800');
+        printWindow.document.write('<html><head><title>탐방객 안전사고 처리 현황 인쇄</title>');
+        printWindow.document.write('<style>body{font-family: Arial, sans-serif;}</style>');
+        printWindow.document.write('</head><body>');
+        printWindow.document.write(printContent);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    });
+</script>
 
 
  <!-- 탐방객 안전사고 처리 현황 저장 데이터 표시 섹션 -->   
@@ -352,7 +381,7 @@
         const textUrl = URL.createObjectURL(textFile);
         const downloadTextLink = document.getElementById('downloadText');
         downloadTextLink.href = textUrl;
-        downloadTextLink.download = 'incident_data.txt';
+        downloadTextLink.download = '안전사고일지_data.txt';
         downloadTextLink.style.display = 'block';
 
         // Prepare CSV file
@@ -361,7 +390,7 @@
         const csvUrl = URL.createObjectURL(csvFile);
         const downloadExcelLink = document.getElementById('downloadExcel');
         downloadExcelLink.href = csvUrl;
-        downloadExcelLink.download = 'incident_data.csv';
+        downloadExcelLink.download = '안전사고일지_data.csv';
         downloadExcelLink.style.display = 'block';
     });
 
