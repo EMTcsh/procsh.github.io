@@ -6,7 +6,8 @@
     <title>이미지 업로드 및 표시</title>
 </head>
 <body>
-    <h1>이미지0 업로드</h1>
+  <h1>근무 상황표</h1>
+    <h4>이미지0 업로드</h4>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput0" accept="image/*">
@@ -14,22 +15,38 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage0" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage0">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image0')) {
+            document.getElementById('uploadedImage0').src = localStorage.getItem('image0');
+        }
+
         document.getElementById('imageInput0').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage0').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image0', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage0').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage0').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image0');
+        });
     </script>
 
-    <h1>이미지1 업로드</h1>
+    <h3>이미지1 업로드</h3>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput1" accept="image/*">
@@ -37,22 +54,38 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage1" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage1">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image1')) {
+            document.getElementById('uploadedImage1').src = localStorage.getItem('image1');
+        }
+
         document.getElementById('imageInput1').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage1').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image1', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage1').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage1').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image1');
+        });
     </script>
 
-    <h1>이미지2 업로드</h1>
+    <h3>이미지2 업로드</h3>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput2" accept="image/*">
@@ -60,22 +93,38 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage2" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage2">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image2')) {
+            document.getElementById('uploadedImage2').src = localStorage.getItem('image2');
+        }
+
         document.getElementById('imageInput2').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage2').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image2', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage2').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage2').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image2');
+        });
     </script>
 
-    <h1>이미지3 업로드</h1>
+    <h3>이미지3 업로드</h3>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput3" accept="image/*">
@@ -83,22 +132,38 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage3" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage3">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image3')) {
+            document.getElementById('uploadedImage3').src = localStorage.getItem('image3');
+        }
+
         document.getElementById('imageInput3').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage3').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image3', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage3').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage3').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image3');
+        });
     </script>
 
-    <h1>이미지4 업로드</h1>
+    <h3>이미지4 업로드</h3>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput4" accept="image/*">
@@ -106,22 +171,38 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage4" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage4">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image4')) {
+            document.getElementById('uploadedImage4').src = localStorage.getItem('image4');
+        }
+
         document.getElementById('imageInput4').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage4').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image4', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage4').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage4').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image4');
+        });
     </script>
 
-    <h1>이미지5 업로드</h1>
+    <h3>이미지5 업로드</h3>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput5" accept="image/*">
@@ -129,22 +210,38 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage5" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage5">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image5')) {
+            document.getElementById('uploadedImage5').src = localStorage.getItem('image5');
+        }
+
         document.getElementById('imageInput5').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage5').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image5', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage5').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage5').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image5');
+        });
     </script>
 
-    <h1>이미지6 업로드</h1>
+    <h3>이미지6 업로드</h3>
 
     <!-- 파일 선택 입력 필드 -->
     <input type="file" id="imageInput6" accept="image/*">
@@ -152,18 +249,34 @@
     <!-- 이미지 표시할 영역 -->
     <div>
         <img id="uploadedImage6" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+        <button id="deleteImage6">삭제</button>
     </div>
 
     <script>
+        // 페이지 로드 시 이미지가 로컬 스토리지에 저장된 이미지가 있으면 표시
+        if (localStorage.getItem('image6')) {
+            document.getElementById('uploadedImage6').src = localStorage.getItem('image6');
+        }
+
         document.getElementById('imageInput6').addEventListener('change', function(event) {
             var file = event.target.files[0];
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('uploadedImage6').src = e.target.result;
+                    // 로컬 스토리지에 이미지 데이터 저장
+                    localStorage.setItem('image6', e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
+        });
+
+        // 삭제 버튼 클릭 시 이미지 삭제
+        document.getElementById('deleteImage6').addEventListener('click', function() {
+            // 이미지 삭제
+            document.getElementById('uploadedImage6').src = '';
+            // 로컬 스토리지에서 해당 이미지 삭제
+            localStorage.removeItem('image6');
         });
     </script>
 
