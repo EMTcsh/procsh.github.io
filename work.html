@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 업로드 및 표시</title>
+</head>
+<body>
+    <h1>이미지0 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput0" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage0" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput0').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage0').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <h1>이미지1 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput1" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage1" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput1').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage1').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <h1>이미지2 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput2" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage2" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput2').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage2').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <h1>이미지3 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput3" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage3" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput3').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage3').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <h1>이미지4 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput4" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage4" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput4').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage4').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <h1>이미지5 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput5" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage5" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput5').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage5').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <h1>이미지6 업로드</h1>
+
+    <!-- 파일 선택 입력 필드 -->
+    <input type="file" id="imageInput6" accept="image/*">
+    
+    <!-- 이미지 표시할 영역 -->
+    <div>
+        <img id="uploadedImage6" alt="업로드된 이미지" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
+        document.getElementById('imageInput6').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('uploadedImage6').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+</html>
