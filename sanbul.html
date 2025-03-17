@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>산불 일일상황 근무표</title>
+    <title>산불 비상근무 상황표</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
          body {
@@ -148,7 +148,7 @@
 <body>
             
 <div class="container">
-    <h2>산불 일일상황 근무표</h2>
+    <h2>산불 비상근무 상황표</h2>
 
     <!-- 근무표 테이블 -->
     <table>
@@ -171,7 +171,7 @@
     <!-- 근무자 추가 폼 -->
     <form id="workerForm">
         <div class="form-row">
-            <h2>산불근무 입력</h2>
+            <h2>산불 비상근무 입력</h2>
             <div class="half">
                 <label for="date">날짜:</label>
                 <input type="date" id="date" required>
@@ -201,8 +201,8 @@
             </div>
 
             <div class="half">
-                <label for="fireIndex">산불지수 예측:</label>
-                <input id="fireIndex" placeholder="산불지수 예측 입력" required>
+                <label for="fireIndex">산불순찰 구역:</label>
+                <input id="fireIndex" placeholder="산불순찰 구역 입력" required>
             </div>
 
             <div class="half">
@@ -267,7 +267,7 @@
         const name = document.getElementById("name").value;
         const remarks = document.getElementById("remarks").value;
         const warningLevel = document.getElementById("warningLevel").value;  // 산불위기경보단계
-        const fireIndex = document.getElementById("fireIndex").value;  // 산불지수 예측
+        const fireIndex = document.getElementById("fireIndex").value;  // 산불순찰 구역
         const notice = document.getElementById("notice").value;  // 개인임무
 
         if (!date || !startTime || !endTime || !name || !remarks || !warningLevel || !fireIndex || !notice) {
@@ -332,7 +332,7 @@
 
     // 공유 기능: 데이터 클립보드에 복사
    function shareLink() {
-    let tableData = "날짜,\t근무시간,\t근무자,\t근무장소,\t산불위기경보단계, \t산불지수 예측, \t개인임무.\n";  // CSV 구분자로 탭(\t)을 사용
+    let tableData = "날짜,\t근무시간,\t근무자,\t근무장소,\t산불위기경보단계, \t산불순찰 구역, \t개인임무.\n";  // CSV 구분자로 탭(\t)을 사용
     const rows = document.querySelectorAll("#workerTable tr");
     rows.forEach(row => {
         const columns = row.querySelectorAll("td");
@@ -351,7 +351,7 @@
    // 파일 저장 기능: Excel 파일로 저장 (삭제란 제외)
 function saveToExcel() {
     const tableData = [];
-    const headers = ["날짜", "근무 시간", "근무자", "근무장소", "산불위기경보단계", "산불지수 예측", "개인임무"];
+    const headers = ["날짜", "근무 시간", "근무자", "근무장소", "산불위기경보단계", "산불순찰 구역", "개인임무"];
     tableData.push(headers);
 
     // 테이블에서 데이터 읽어오기 (삭제된 항목 제외)
