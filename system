@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>시설물 관리 목록표</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    select {
+      padding: 5px;
+    }
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    .signature-box {
+      width: 45%;
+      border-top: 1px solid #000;
+      text-align: center;
+      padding-top: 10px;
+      font-size: 16px;
+    }
+    @media print {
+      select {
+        border: none;
+        background: transparent;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>무등산사무소 탐방로 안전 시설물 관리 목록표</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>관리번호</th>
+        <th>시설명</th>
+        <th>위치</th>
+        <th>설치일</th>
+        <th>상태</th>
+        <th>확인자</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+   <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
+    <tr>
+        <td>CCTV-001</td>
+        <td>탐방로 CCTV</td>
+        <td>무등산 입구</td>
+        <td>2023-03-10</td>
+        <td>
+          <select>
+            <option selected>정상</option>
+            <option>비정상</option>
+            <option>현장점검 필요</option>
+            <option>A/S 요청</option>
+          </select>
+        </td>
+        <td><select>
+            <option selected>선택</option>
+            <option>신영환</option>
+            <option>최성현</option>
+            <option>김도형</option>
+            <option>김월중</option>
+            <option>송시온</option>
+            <option>김성훈</option>
+            </select></td>
+      </tr>
