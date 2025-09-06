@@ -384,6 +384,44 @@ function saveToExcel() {
     // 페이지 로드 시 DB 열기
     openDB();
 </script>
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwB-mP1uwBYO7nSrCyyDDXXjxUTmM5VS2BG1JlBJ8msPU9aFCHrQQyoyj1GU8RGDrTZ/exec";
 
+function addWorker() {
+    const date = document.getElementById("date").value;
+    const startTime = document.getElementById("startTime").value;
+    const endTime = document.getElementById("endTime").value;
+    const name = document.getElementById("name").value;
+    const remarks = document.getElementById("remarks").value;
+    const warningLevel = document.getElementById("warningLevel").value;
+    const fireIndex = document.getElementById("fireIndex").value;
+    const notice = document.getElementById("notice").value;
+
+    if (!date || !startTime || !endTime || !name || !remarks || !warningLevel || !fireIndex || !notice) {
+        alert("모든 필수 정보를 입력해주세요.");
+        return;
+    }
+
+    const workTime = `${startTime} - ${endTime}`;
+    const worker = { date, workTime, name, remarks, warningLevel, fireIndex, notice };
+
+    // 구글 스프레드시트 저장 요청
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(worker),
+        headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.text())
+    .then(msg => {
+        alert("구글 스프레드시트에 저장되었습니다 ✅");
+        addRowToTable(worker);   // 화면 테이블에도 추가
+        document.getElementById("workerForm").reset();
+    })
+    .catch(err => {
+        console.error("저장 실패:", err);
+        alert("구글 스프레드시트 저장 실패 ❌");
+    });
+}
+</script>
 </body>
 </html>
