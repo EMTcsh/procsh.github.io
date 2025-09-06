@@ -155,11 +155,11 @@
         <thead>
             <tr>
                 <th>날짜</th>
-                <th>근무 시간</th>
+                <th>근무시간</th>
                 <th>근무자</th>
-                <th>근무장소</th>
+                <th>배치장소</th>
                 <th>산불위기경보단계</th>
-                <th>산불지수 예측</th>
+                <th>산불지수예측</th>
                 <th>개인임무</th>
                 <th>삭제</th>
             </tr>
@@ -190,7 +190,7 @@
                 <input type="text" id="name" placeholder="이름" required>
             </div>
             <div class="half">
-                <label for="remarks">근무장소:</label>
+                <label for="remarks">배치치장소:</label>
                 <input type="text" id="remarks" placeholder="근무 장소" required>
             </div>
           
@@ -201,7 +201,7 @@
             </div>
 
             <div class="half">
-                <label for="fireIndex">산불순찰 구역:</label>
+                <label for="fireIndex">산불배치(순찰) 구역:</label>
                 <input id="fireIndex" placeholder="산불순찰 구역 입력" required>
             </div>
 
@@ -332,7 +332,7 @@
 
     // 공유 기능: 데이터 클립보드에 복사
    function shareLink() {
-    let tableData = "날짜,\t근무시간,\t근무자,\t근무장소,\t산불위기경보단계, \t산불순찰 구역, \t개인임무.\n";  // CSV 구분자로 탭(\t)을 사용
+    let tableData = "날짜,\t근무시간,\t근무자,\t배치장소,\t산불위기경보단계, \t산불배치(순찰) 구역, \t개인임무.\n";  // CSV 구분자로 탭(\t)을 사용
     const rows = document.querySelectorAll("#workerTable tr");
     rows.forEach(row => {
         const columns = row.querySelectorAll("td");
@@ -351,7 +351,7 @@
    // 파일 저장 기능: Excel 파일로 저장 (삭제란 제외)
 function saveToExcel() {
     const tableData = [];
-    const headers = ["날짜", "근무 시간", "근무자", "근무장소", "산불위기경보단계", "산불순찰 구역", "개인임무"];
+    const headers = ["날짜", "근무시간", "근무자", "배치치장소", "산불위기경보단계", "산불배치(순찰) 구역역", "개인임무"];
     tableData.push(headers);
 
     // 테이블에서 데이터 읽어오기 (삭제된 항목 제외)
@@ -375,10 +375,10 @@ function saveToExcel() {
     const today = new Date().toISOString().split('T')[0]; // yyyy-MM-dd 형식
     const ws = XLSX.utils.aoa_to_sheet(tableData);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "근무표");
+    XLSX.utils.book_append_sheet(wb, ws, "비상근무");
 
     // 엑셀 파일로 다운로드
-    XLSX.writeFile(wb, `산불_근무표_${today}.xlsx`);
+    XLSX.writeFile(wb, `산불_비상근무_${today}.xlsx`);
 }
 
     // 페이지 로드 시 DB 열기
