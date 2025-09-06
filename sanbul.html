@@ -259,28 +259,46 @@
         };
     }
 
-    // 근무자 추가
-    function addWorker() {
-        const date = document.getElementById("date").value;
-        const startTime = document.getElementById("startTime").value;
-        const endTime = document.getElementById("endTime").value;
-        const name = document.getElementById("name").value;
-        const remarks = document.getElementById("remarks").value;
-        const warningLevel = document.getElementById("warningLevel").value;  // 산불위기경보단계
-        const fireIndex = document.getElementById("fireIndex").value;  // 산불슨찰 구역
-        const notice = document.getElementById("notice").value;  // 개인임무
+   // 근무자 추가
+function addWorker() {
+    const date = document.getElementById("date").value;
+    const startTime = document.getElementById("startTime").value;
+    const endTime = document.getElementById("endTime").value;
+    const name = document.getElementById("name").value;
+    const remarks = document.getElementById("remarks").value;
+    const warningLevel = document.getElementById("warningLevel").value;
+    const fireIndex = document.getElementById("fireIndex").value;
+    const notice = document.getElementById("notice").value;
 
-        if (!date || !startTime || !endTime || !name || !remarks || !warningLevel || !fireIndex || !notice) {
-            alert("모든 필수 정보를 입력해주세요.");
-            return;
-        }
+    if (!date || !startTime || !endTime || !name || !remarks || !warningLevel || !fireIndex || !notice) {
+        alert("모든 필수 정보를 입력해주세요.");
+        return;
+    }
 
-        const workTime = `${startTime} - ${endTime}`;
-        const downloadDate = new Date().toLocaleDateString();
-        const worker = { date, workTime, name, remarks, warningLevel, fireIndex, notice, downloadDate };
+    const workTime = `${startTime} - ${endTime}`;
+    const worker = { date, workTime, name, remarks, warningLevel, fireIndex, notice };
 
-        // IndexedDB에 저장
-        saveToDB(worker);
+    // ✅ 구글 Apps Script 웹앱 URL (실제 배포 후 받은 주소로 교체하세요)
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1goX7uk_nAkKALFHShv4WE-FpqortF_auklXY5lOuh0Fal3US41H2zVrRDDX0B7z1/exec";
+
+    // 구글 시트에 저장
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",   // CORS 오류 방지
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(worker)
+    })
+    .then(() => {
+        console.log("구글시트 저장 성공");
+    })
+    .catch(err => {
+        console.error("구글시트 저장 실패:", err);
+    });
+
+    // 로컬 IndexedDB 저장
+    saveToDB(worker);
+    addRowToTable(worker);
+    document.getElementById("workerForm").reset();
 
         // 테이블에 추가
         addRowToTable(worker);
